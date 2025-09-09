@@ -7,17 +7,16 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Mai Xuân Thắng
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0856339008
+&emsp; **Email:** geek40391@gmail.com
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Trường:** Phân hiệu Đại học FPT thành phố Hồ Chí Minh
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Ngành:** Kĩ thuật phần mềm
 
-&emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Lớp:** AWS082025
+&emsp; **MSSV:** SE196244
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
@@ -25,7 +24,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 
 
