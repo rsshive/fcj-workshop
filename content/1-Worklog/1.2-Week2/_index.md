@@ -12,46 +12,44 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn AWS Identity and Access Management (IAM) fundamentals
+* Understand networking essentials with Amazon VPC
+* Master basic AWS security and access control concepts
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Access Management with AWS Identity and Access Management (IAM) <br> - Learn about users, groups, roles, and policies <br> - Understand IAM best practices                                        | 16/09/2025 | 16/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Networking Essentials with Amazon Virtual Private Cloud (VPC) <br> - Learn about subnets, route tables, and internet gateways <br> - Understand VPC security groups and NACLs                    | 17/09/2025 | 17/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Practice:** <br>&emsp; + Create IAM users and groups <br>&emsp; + Assign policies and permissions <br>&emsp; + Set up MFA for enhanced security                                                 | 18/09/2025 | 18/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Practice:** <br>&emsp; + Create custom VPC with public and private subnets <br>&emsp; + Configure route tables and security groups <br>&emsp; + Test network connectivity                      | 19/09/2025 | 19/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Review and consolidate IAM and VPC knowledge <br> - Troubleshoot common networking and access issues <br> - Prepare for next week's EC2 topics                                                     | 20/09/2025 | 20/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered AWS Identity and Access Management (IAM) fundamentals:
+  * Users, groups, and roles management
+  * Policy creation and attachment
+  * Multi-factor authentication (MFA) setup
+  * IAM best practices implementation
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully understood Amazon VPC networking concepts:
+  * VPC creation and configuration
+  * Public and private subnet design
+  * Route tables and internet gateway setup
+  * Security groups and Network ACLs configuration
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Gained hands-on experience with:
+  * Creating and managing IAM users and groups
+  * Assigning appropriate permissions and policies
+  * Setting up secure network architectures
+  * Implementing security best practices
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Developed understanding of AWS security principles:
+  * Principle of least privilege
+  * Network segmentation strategies
+  * Access control mechanisms
+  * Security monitoring basics
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
 * ...

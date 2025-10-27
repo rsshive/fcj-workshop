@@ -12,47 +12,55 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Chốt nghiệp vụ và requirements cho dự án
+* Học các kiến thức về AWS services đã chốt
+* Vẽ flow ứng dụng về hướng hoạt động
+* Thu thập feedback và triển khai tạo MVP
+* Làm quen với Lambda và API Gateway
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Chốt nghiệp vụ và requirements <br> - Khóa phạm vi và specifications dự án <br> - Review và validate tất cả requirements dự án                                                          | 14/10/2025   | 14/10/2025      | Tài liệu dự án, template requirements |
+| 3   | - Tìm hiểu sâu về các AWS services đã chọn <br> - Nghiên cứu tài liệu service và best practices <br> - Hiểu limitations và capabilities của services                                      | 15/10/2025   | 15/10/2025      | <https://docs.aws.amazon.com/> |
+| 4   | - Thiết kế flow ứng dụng và kiến trúc <br> - Tạo sơ đồ workflow hoạt động <br> - Map user journey và system interactions                                                                   | 16/10/2025   | 16/10/2025      | Công cụ thiết kế kiến trúc, AWS Well-Architected |
+| 5   | - Thu thập feedback từ stakeholders về design <br> - Implement feedback và tinh chỉnh MVP scope <br> - Bắt đầu lập kế hoạch phát triển MVP                                                | 17/10/2025   | 17/10/2025      | Công cụ thu thập feedback, MVP frameworks |
+| 6   | - Học AWS Lambda cơ bản <br>&emsp; + Tạo và deploy functions <br>&emsp; + Event-driven architecture <br> - Học API Gateway cơ bản <br>&emsp; + Tạo REST API <br>&emsp; + Integration patterns | 18/10/2025   | 18/10/2025      | <https://docs.aws.amazon.com/lambda/>, <https://docs.aws.amazon.com/apigateway/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Chốt thành công nghiệp vụ dự án:
+  * Khóa requirements toàn diện cho dự án
+  * Validate tất cả business rules và specifications
+  * Thiết lập ranh giới phạm vi dự án rõ ràng
+  * Tạo tài liệu functional requirements chi tiết
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Nắm vững các AWS services đã chọn:
+  * Hiểu sâu về các AWS services đã chọn
+  * Nghiên cứu tài liệu service và implementation patterns
+  * Hiểu limitations, pricing và best practices của services
+  * Xác định cấu hình service tối ưu cho dự án
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thiết kế kiến trúc ứng dụng toàn diện:
+  * Tạo sơ đồ flow ứng dụng chi tiết
+  * Map operational workflows và user journeys
+  * Thiết kế system interaction patterns
+  * Thiết lập data flow và processing logic
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Triển khai phát triển MVP dựa trên feedback:
+  * Thu thập feedback có giá trị từ stakeholders về designs
+  * Tinh chỉnh MVP scope dựa trên phân tích feedback
+  * Ưu tiên features cho giai đoạn phát triển đầu tiên
+  * Tạo roadmap phát triển có thể thực hiện
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Có chuyên môn về AWS Lambda và API Gateway:
+  * Học serverless computing cơ bản với Lambda
+  * Nắm vững tạo function, deployment và event handling
+  * Hiểu tạo và quản lý REST API với API Gateway
+  * Khám phá integration patterns giữa Lambda và API Gateway
+  * Xác định use cases để mở rộng serverless architecture
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
 * ...
 
 

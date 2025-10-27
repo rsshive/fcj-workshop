@@ -12,48 +12,46 @@ pre: " <b> 1.4. </b> "
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học database cơ bản với Amazon RDS
+* Hiểu về quản lý relational database trong cloud
+* Nắm vững các chiến lược bảo mật và backup database
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Database cơ bản với Amazon Relational Database Service (RDS) <br> - Tìm hiểu về RDS engine types và configurations <br> - Hiểu về database instance classes                            | 30/09/2025   | 30/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - RDS security và access management <br> - Tìm hiểu về database parameter groups và option groups <br> - Hiểu VPC security cho databases                                                  | 01/10/2025   | 01/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Database backup và recovery strategies <br> - Tìm hiểu về automated backups và snapshots <br> - Hiểu Multi-AZ deployments và read replicas                                             | 02/10/2025   | 02/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** <br>&emsp; + Tạo RDS instances với các engines khác nhau <br>&emsp; + Cấu hình security groups và parameter groups <br>&emsp; + Kiểm tra kết nối database từ EC2       | 03/10/2025   | 03/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Thiết lập automated backups và snapshots <br>&emsp; + Tạo read replicas <br>&emsp; + Kiểm tra database recovery procedures                                 | 04/10/2025   | 04/10/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững database cơ bản của Amazon RDS:
+  * Các loại RDS engine types khác nhau (MySQL, PostgreSQL, Oracle, SQL Server)
+  * Database instance classes và sizing considerations
+  * Storage types và performance characteristics
+  * Chiến lược tối ưu hóa chi phí cho databases
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Triển khai thành công RDS security:
+  * Cấu hình database security groups và VPC settings
+  * Thiết lập parameter groups và option groups
+  * Triển khai encryption at rest và in transit
+  * Quản lý database user access và permissions
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Có chuyên môn về backup và recovery:
+  * Cấu hình automated backup policies
+  * Tạo và quản lý database snapshots
+  * Thiết lập Multi-AZ deployments cho high availability
+  * Triển khai read replicas cho performance scaling
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phát triển kỹ năng database thực hành:
+  * Tạo và cấu hình RDS instances
+  * Thiết lập secure connections từ EC2 đến RDS
+  * Thực hiện database maintenance operations
+  * Giám sát database performance và health
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
 * ...
 
 

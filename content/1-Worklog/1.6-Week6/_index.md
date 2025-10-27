@@ -12,46 +12,53 @@ pre: " <b> 1.6. </b> "
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Finalize business logic and requirements for the project
+* Learn selected AWS services in depth
+* Design application flow and operational direction
+* Collect feedback and implement MVP development
+* Master AWS Lambda and API Gateway fundamentals
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Finalize business logic and requirements <br> - Lock down project scope and specifications <br> - Review and validate all project requirements                                                      | 14/10/2025 | 14/10/2025      | Project documentation, requirements templates |
+| 3   | - Deep dive into selected AWS services <br> - Study service documentation and best practices <br> - Understand service limitations and capabilities                                                   | 15/10/2025 | 15/10/2025      | <https://docs.aws.amazon.com/> |
+| 4   | - Design application flow and architecture <br> - Create operational workflow diagrams <br> - Map user journey and system interactions                                                               | 16/10/2025 | 16/10/2025      | Architecture design tools, AWS Well-Architected |
+| 5   | - Collect stakeholder feedback on design <br> - Implement feedback and refine MVP scope <br> - Begin MVP development planning                                                                         | 17/10/2025 | 17/10/2025      | Feedback collection tools, MVP frameworks |
+| 6   | - Learn AWS Lambda fundamentals <br>&emsp; + Function creation and deployment <br>&emsp; + Event-driven architecture <br> - Learn API Gateway basics <br>&emsp; + REST API creation <br>&emsp; + Integration patterns | 18/10/2025 | 18/10/2025      | <https://docs.aws.amazon.com/lambda/>, <https://docs.aws.amazon.com/apigateway/> |
 
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully finalized project business logic:
+  * Locked down comprehensive project requirements
+  * Validated all business rules and specifications
+  * Established clear project scope boundaries
+  * Created detailed functional requirements documentation
 
-* Successfully created and configured an AWS Free Tier account.
+* Mastered selected AWS services:
+  * Gained deep understanding of chosen AWS services
+  * Studied service documentation and implementation patterns
+  * Understood service limitations, pricing, and best practices
+  * Identified optimal service configurations for the project
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Designed comprehensive application architecture:
+  * Created detailed application flow diagrams
+  * Mapped operational workflows and user journeys
+  * Designed system interaction patterns
+  * Established data flow and processing logic
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Implemented feedback-driven MVP development:
+  * Collected valuable stakeholder feedback on designs
+  * Refined MVP scope based on feedback analysis
+  * Prioritized features for initial development phase
+  * Created actionable development roadmap
 
-* Used AWS CLI to perform basic operations such as:
+* Acquired AWS Lambda and API Gateway expertise:
+  * Learned serverless computing fundamentals with Lambda
+  * Mastered function creation, deployment, and event handling
+  * Understood API Gateway REST API creation and management
+  * Explored integration patterns between Lambda and API Gateway
+  * Identified use cases for serverless architecture expansion
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
 * ...

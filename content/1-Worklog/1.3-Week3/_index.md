@@ -12,46 +12,44 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Master compute essentials with Amazon EC2
+* Learn instance profiling with IAM roles for EC2
+* Understand cloud development environment setup
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Compute Essentials with Amazon Elastic Compute Cloud (EC2) <br> - Learn about instance types, AMIs, and storage options <br> - Understand EC2 pricing models                                      | 23/09/2025 | 23/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Instance Profiling with IAM Roles for EC2 <br> - Learn how to attach IAM roles to EC2 instances <br> - Understand service-linked roles and permissions                                             | 24/09/2025 | 24/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Cloud Development with AWS Cloud9 <br> - Set up cloud-based development environment <br> - Learn collaborative coding features                                                                      | 25/09/2025 | 25/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Practice:** <br>&emsp; + Launch EC2 instances with different configurations <br>&emsp; + Attach IAM roles to EC2 instances <br>&emsp; + Test role-based permissions                            | 26/09/2025 | 26/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Practice:** <br>&emsp; + Set up AWS Cloud9 environment <br>&emsp; + Deploy applications from Cloud9 <br>&emsp; + Integrate with EC2 instances                                                  | 27/09/2025 | 27/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Mastered Amazon EC2 compute essentials:
+  * Different instance types and their use cases
+  * Amazon Machine Images (AMI) creation and management
+  * EBS volumes and storage options
+  * EC2 pricing models and cost optimization
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully implemented IAM roles for EC2:
+  * Created and attached IAM roles to EC2 instances
+  * Configured service-linked roles and permissions
+  * Implemented secure access patterns without hardcoded credentials
+  * Tested role-based access to AWS services
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Gained experience with AWS Cloud9:
+  * Set up cloud-based development environments
+  * Explored collaborative coding features
+  * Integrated Cloud9 with EC2 instances
+  * Deployed applications from the cloud IDE
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Developed practical skills in:
+  * Launching and configuring EC2 instances
+  * Managing instance lifecycle and monitoring
+  * Implementing security best practices for compute resources
+  * Using cloud-based development workflows
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
 * ...

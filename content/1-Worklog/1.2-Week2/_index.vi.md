@@ -12,48 +12,46 @@ pre: " <b> 1.2. </b> "
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học các khái niệm cơ bản về AWS Identity and Access Management (IAM)
+* Hiểu về networking cơ bản với Amazon VPC
+* Nắm vững các khái niệm bảo mật và kiểm soát truy cập AWS cơ bản
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Quản lý truy cập với AWS Identity and Access Management (IAM) <br> - Tìm hiểu về users, groups, roles và policies <br> - Hiểu các best practices của IAM                               | 16/09/2025   | 16/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Networking cơ bản với Amazon Virtual Private Cloud (VPC) <br> - Tìm hiểu về subnets, route tables và internet gateways <br> - Hiểu về VPC security groups và NACLs                     | 17/09/2025   | 17/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Thực hành:** <br>&emsp; + Tạo IAM users và groups <br>&emsp; + Gán policies và permissions <br>&emsp; + Thiết lập MFA để tăng cường bảo mật                                          | 18/09/2025   | 18/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** <br>&emsp; + Tạo VPC tùy chỉnh với public và private subnets <br>&emsp; + Cấu hình route tables và security groups <br>&emsp; + Kiểm tra kết nối mạng                   | 19/09/2025   | 19/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Ôn tập và củng cố kiến thức IAM và VPC <br> - Khắc phục các vấn đề thường gặp về networking và access <br> - Chuẩn bị cho các chủ đề EC2 tuần tới                                        | 20/09/2025   | 20/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững các khái niệm cơ bản về AWS Identity and Access Management (IAM):
+  * Quản lý users, groups và roles
+  * Tạo và gán policies
+  * Thiết lập xác thực đa yếu tố (MFA)
+  * Triển khai các best practices của IAM
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu thành công các khái niệm networking của Amazon VPC:
+  * Tạo và cấu hình VPC
+  * Thiết kế public và private subnet
+  * Thiết lập route tables và internet gateway
+  * Cấu hình security groups và Network ACLs
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Có kinh nghiệm thực hành với:
+  * Tạo và quản lý IAM users và groups
+  * Gán permissions và policies phù hợp
+  * Thiết lập kiến trúc mạng bảo mật
+  * Triển khai các best practices bảo mật
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phát triển hiểu biết về các nguyên tắc bảo mật AWS:
+  * Nguyên tắc quyền tối thiểu
+  * Chiến lược phân đoạn mạng
+  * Cơ chế kiểm soát truy cập
+  * Cơ bản về giám sát bảo mật
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
 * ...
 
 

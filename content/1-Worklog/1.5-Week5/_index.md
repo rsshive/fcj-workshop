@@ -12,46 +12,46 @@ pre: " <b> 1.5. </b> "
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Collaborate with team to research and develop project ideas
+* Finalize project concept and create development plan
+* Write project requirements and demo specifications
+* Select appropriate AWS services for the project
+* Establish project timeline, deadlines, and role assignments
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Team collaboration for project idea research <br> - Brainstorm potential project concepts <br> - Research market needs and technical feasibility                                                   | 07/10/2025 | 07/10/2025      | Team collaboration tools, AWS documentation |
+| 3   | - Finalize project idea and concept <br> - Reach team consensus on project direction <br> - Define project scope and objectives                                                                       | 08/10/2025 | 08/10/2025      | Project planning templates |
+| 4   | - Create development plan and timeline <br> - Write detailed project requirements <br> - Define demo specifications and success criteria                                                              | 09/10/2025 | 09/10/2025      | Requirements documentation templates |
+| 5   | - Select AWS services for the project <br>&emsp; + Evaluate service compatibility <br>&emsp; + Consider cost and scalability <br>&emsp; + Plan service integration                                 | 10/10/2025 | 10/10/2025      | <https://aws.amazon.com/products/> |
+| 6   | - Establish project deadlines and milestones <br> - Assign roles and responsibilities to team members <br> - Set up project management and communication channels                                     | 11/10/2025 | 11/10/2025      | Project management tools |
 
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully completed team project ideation process:
+  * Conducted comprehensive research on potential project ideas
+  * Facilitated productive team brainstorming sessions
+  * Evaluated technical feasibility and market relevance
+  * Reached unanimous team consensus on final project concept
 
-* Successfully created and configured an AWS Free Tier account.
+* Developed comprehensive project planning documentation:
+  * Created detailed project requirements document
+  * Defined clear demo specifications and success criteria
+  * Established project scope, objectives, and deliverables
+  * Developed realistic development timeline and milestones
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Completed AWS service selection and architecture planning:
+  * Evaluated multiple AWS services for project compatibility
+  * Considered cost optimization and scalability factors
+  * Designed preliminary system architecture
+  * Planned service integration strategies
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Established effective project management framework:
+  * Set clear project deadlines and milestone dates
+  * Assigned specific roles and responsibilities to team members
+  * Implemented project communication channels and tools
+  * Created accountability and progress tracking mechanisms
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
 * ...

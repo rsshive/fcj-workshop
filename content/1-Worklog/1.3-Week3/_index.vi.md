@@ -12,48 +12,46 @@ pre: " <b> 1.3. </b> "
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững compute cơ bản với Amazon EC2
+* Học instance profiling với IAM roles cho EC2
+* Hiểu về thiết lập môi trường phát triển cloud
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Compute cơ bản với Amazon Elastic Compute Cloud (EC2) <br> - Tìm hiểu về instance types, AMIs và storage options <br> - Hiểu các mô hình pricing của EC2                              | 23/09/2025   | 23/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Instance Profiling với IAM Roles cho EC2 <br> - Học cách gắn IAM roles vào EC2 instances <br> - Hiểu về service-linked roles và permissions                                            | 24/09/2025   | 24/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Cloud Development với AWS Cloud9 <br> - Thiết lập môi trường phát triển cloud-based <br> - Học các tính năng collaborative coding                                                       | 25/09/2025   | 25/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - **Thực hành:** <br>&emsp; + Khởi chạy EC2 instances với các cấu hình khác nhau <br>&emsp; + Gắn IAM roles vào EC2 instances <br>&emsp; + Kiểm tra role-based permissions              | 26/09/2025   | 26/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - **Thực hành:** <br>&emsp; + Thiết lập AWS Cloud9 environment <br>&emsp; + Deploy ứng dụng từ Cloud9 <br>&emsp; + Tích hợp với EC2 instances                                           | 27/09/2025   | 27/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Nắm vững compute cơ bản của Amazon EC2:
+  * Các loại instance types khác nhau và use cases
+  * Tạo và quản lý Amazon Machine Images (AMI)
+  * EBS volumes và storage options
+  * Các mô hình pricing EC2 và tối ưu hóa chi phí
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Triển khai thành công IAM roles cho EC2:
+  * Tạo và gắn IAM roles vào EC2 instances
+  * Cấu hình service-linked roles và permissions
+  * Triển khai secure access patterns không cần hardcoded credentials
+  * Kiểm tra role-based access đến AWS services
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Có kinh nghiệm với AWS Cloud9:
+  * Thiết lập cloud-based development environments
+  * Khám phá các tính năng collaborative coding
+  * Tích hợp Cloud9 với EC2 instances
+  * Deploy ứng dụng từ cloud IDE
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phát triển kỹ năng thực hành trong:
+  * Khởi chạy và cấu hình EC2 instances
+  * Quản lý lifecycle và monitoring instances
+  * Triển khai security best practices cho compute resources
+  * Sử dụng cloud-based development workflows
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
 * ...
 
 
