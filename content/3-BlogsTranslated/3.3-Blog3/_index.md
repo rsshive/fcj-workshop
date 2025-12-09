@@ -1,14 +1,10 @@
-﻿---
+---
 title: "Blog 3"
 date: "`r Sys.Date()`"
 weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
- **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 # Preventing machine breakdowns: How Physical AI predicts equipment problems
 
 By Ram Gorur, Ashish Chaurasia, and Channa Samynathan on August 15, 2025 | in [Amazon Bedrock Agents](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/amazon-bedrock-agents/), [Amazon Bedrock Guardrails](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/amazon-machine-learning/amazon-bedrock/amazon-bedrock-guardrails/), [Amazon Machine Learning](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/amazon-machine-learning/), [Amazon SageMaker AI](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/sagemaker/amazon-sagemaker-ai/), [Artificial Intelligence](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/), [Automotive](https://aws.amazon.com/blogs/iot/category/industries/automotive/), [AWS IoT Core](https://aws.amazon.com/blogs/iot/category/internet-of-things/aws-iot-platform/), [AWS IoT FleetWise](https://aws.amazon.com/blogs/iot/category/internet-of-things/aws-iot-fleetwise/), [Generative AI](https://aws.amazon.com/blogs/iot/category/artificial-intelligence/generative-ai/), [Manufacturing](https://aws.amazon.com/blogs/iot/category/industries/manufacturing/), [Technical How-to](https://aws.amazon.com/blogs/iot/category/post-types/technical-how-to/)

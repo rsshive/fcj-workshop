@@ -1,14 +1,10 @@
-﻿---
+---
 title: "Blog 2"
 date: "`r Sys.Date()`"
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
- **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
-
 # Introducing default instance categories for AWS Batch
 
 #### By Angel Pizarro on August 18, 2025 in [AWS Batch](https://aws.amazon.com/blogs/hpc/category/compute/aws-batch/), [High Performance Computing (HPC)](https://aws.amazon.com/blogs/hpc/category/high-performance-computing/) | [Permalink](https://aws.amazon.com/blogs/hpc/introducing-default-instance-categories-for-aws-batch/)
