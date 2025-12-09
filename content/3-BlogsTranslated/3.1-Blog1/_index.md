@@ -151,7 +151,7 @@ In this post we showed how to configure FSx for ONTAP to provide highly availabl
 
 ### Victor Munoz
 
-![Victor Munoz](image.png)
+<img src="image.png" alt="Mô tả ảnh" width="100"/>
 
 Victor Munoz is a Senior Storage Solution Architect with extensive experience in driving innovation in enterprise storage infrastructure and data management. He has held Engineering and architecture roles focused on next-generation storage platforms, data protection, and cloud integration at leading technology companies. Victor is passionate about helping organizations modernize their storage environments by leveraging cloud-native capabilities for scalability, resilience, and efficiency.
 
