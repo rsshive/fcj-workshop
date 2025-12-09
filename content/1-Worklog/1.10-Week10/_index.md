@@ -12,42 +12,38 @@ pre: " <b> 1.10. </b> "
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Integrate TMDB data source into the chatbot
+* Develop Lambda functions to support chatbot operations
+* Enhance chatbot with movie/TV show information capabilities
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Research TMDB API structure and capabilities <br> - Plan TMDB data integration strategy <br> - Define required movie/TV data fields                                                                  | 11/11/2025 | 11/11/2025      | <https://developers.themoviedb.org/> |
+| 3   | - Develop Lambda functions for TMDB API calls <br>&emsp; + Search movies/TV shows <br>&emsp; + Get details and metadata <br>&emsp; + Handle API rate limits                                          | 12/11/2025 | 12/11/2025      | TMDB API documentation |
+| 4   | - Integrate TMDB data with chatbot <br>&emsp; + Connect TMDB Lambda to Bedrock <br>&emsp; + Enhance chatbot prompts with real data <br>&emsp; + Format movie/TV information                          | 13/11/2025 | 13/11/2025      | Lambda integration patterns |
+| 5   | - Develop supporting Lambda functions <br>&emsp; + Data caching layer <br>&emsp; + Error handling and retries <br>&emsp; + Response optimization                                                      | 14/11/2025 | 14/11/2025      | AWS Lambda best practices |
+| 6   | - **Practice:** <br>&emsp; + Test chatbot with TMDB data <br>&emsp; + Validate data accuracy <br>&emsp; + Optimize performance                                                                        | 15/11/2025 | 15/11/2025      | Testing and optimization guides |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully integrated TMDB data source:
+  * Configured TMDB API access
+  * Implemented secure API key management
+  * Set up rate limiting and caching
 
-* Successfully created and configured an AWS Free Tier account.
+* Developed comprehensive Lambda functions:
+  * **TMDB Search Lambda**: Search movies and TV shows
+  * **TMDB Details Lambda**: Fetch detailed information
+  * **Data Processing Lambda**: Format and optimize data
+  * **Cache Management Lambda**: Manage frequently accessed data
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
+* Enhanced chatbot capabilities:
+  * Real-time movie/TV show information
+  * Accurate cast and crew details
+  * Release dates and ratings
+  * Recommendations based on TMDB data
   * View EC2 service
   * Create and manage key pairs
   * Check information about running services

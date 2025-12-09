@@ -1,126 +1,56 @@
----
+﻿---
 title: "Blog 2"
-date: "`r Sys.Date()`"
+date: "\ Sys.Date()\"
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
+ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# Introducing default instance categories for AWS Batch
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+#### By Angel Pizarro on August 18, 2025 in [AWS Batch](https://aws.amazon.com/blogs/hpc/category/compute/aws-batch/), [High Performance Computing (HPC)](https://aws.amazon.com/blogs/hpc/category/high-performance-computing/) | [Permalink](https://aws.amazon.com/blogs/hpc/introducing-default-instance-categories-for-aws-batch/)
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+Today we are launching a new set of **instance family classifications** for **AWS Batch**, including **"default_x86_64"** and **"default_arm64"**. These new categories are both a **clarification** and **improvement** over the existing "optimal" instance type category. This post provides some context about the new feature and how you can **configure Batch environments** to take advantage of these improvements.
 
----
+## Choosing instance types for AWS Batch Compute Environments to launch
 
-## Architecture Guidance
+You can specify the **set of [Amazon EC2](https://aws.amazon.com/ec2/) instance types** that a **compute environment** is allowed to launch to run the jobs in your **job queues**. For example, if you know that your jobs achieve the best **price/performance** on g6.16xlarge, you can set the [computeResources.instanceTypes parameter](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes) of the compute environment to ["g6.16xlarge"], and that environment will only launch **exactly** this instance type and size for jobs in the associated queue(s).
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+To take full advantage of **Batch's scheduling and scaling** capabilities, you should define **a diverse set** of instances and let Batch decide which type to launch based on the CPU, memory, and GPU resource requirements of your jobs. While you can specify a **list of instance types** (e.g., ["c5.24xlarge", "m6.48xlarge"]), you can also define a **set of instance families** (e.g., ["c5","c7a","c7i","m7i"]) for Batch to launch on your behalf. Previously, you also had the option to use the **"optimal"** category, which Batch would map to ["c4","m4","r4"] when those instances were available in **your AWS Region**. If a Region did not have those instance types, Batch would map *optimal* to the **lowest-cost generation** in the Region, typically ["c5","m5","r5"].
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+While *optimal* is a convenient shorthand setting, we have found that it **does not align** with customer expectations. Batch **does not** select instances for the **best performance** of your job or the **best price** for your application. The *optimal* category is just **a simple mapping** and nothing more. Newer instance generations are likely to deliver **better price/performance** for most workloads. In all cases I have examined, **4th generation** instances are both **slower** and **more expensive** than **5th generation**, so *optimal* is actually **not "optimal"** at all!
 
-**The solution architecture is now as follows:**
+Finally, *optimal* **does not include** instances using **AWS Graviton** processors, which are purpose-built to deliver **superior price/performance** for many types of workloads.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+## Upgrading from the "optimal" configuration
 
----
+Today, we have launched a new set of **instance type categories** to improve your experience with Batch's instance selection feature. You can now choose default_x86_64 for a set of **instance families** using **x86** CPUs, and default_arm64 for a set of **instances** using **AWS Graviton** CPUs. The list of **instance types** will **not be static** and will change over time as we introduce new **instance families**. You can find the mapping between each **category** and the set of **instance families** by **Region** in the [**Instance type compute table**](https://docs.aws.amazon.com/batch/latest/userguide/instance-type-compute-table.html) documentation page; for example, the default_arm64 mapping at the time of feature launch will be as follows:
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+| Regions | Instance families |
+| :---- | :---- |
+| All AWS Regions supporting AWS Batch | m6g, c6g, r6g c7g |
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+*Table 1. Mapping of the* default_arm64 *instance type category to specific instance families in Regions supporting AWS Batch.*
 
----
+The default mappings **do not** include accelerated instances by design. We **strongly recommend** you specify instance types explicitly if your workload benefits from accelerated instances. Additionally, we recommend **defining a separate** **job queue** and **compute environment** from your clusters of **non-accelerated** instances. When resources are separated, Batch can make **better** scaling decisions for your workload and **prevent** scheduling non-accelerated jobs onto accelerated instances, which could lead to **unnecessary costs**.
 
-## Technology Choices and Communication Scope
+Similar to previously with *optimal*, you can still **define additional** **instance types** alongside the default_* categories. Batch will consider the **entire list** you have declared when selecting **instance types** to run jobs.
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+## Transitioning from *optimal*
 
----
+We recommend that you update your Batch environments to adopt the new categories. However, you are **not required** to update. AWS Batch compute environments currently using *optimal* remain **valid**. The [**CreateComputeEnvironment**](https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateComputeEnvironment.html) and [**UpdateComputeEnvironment**](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html) API operations still accept *optimal* as a valid value. The behavior of *optimal* will **remain unchanged** until **early November 2025**. After that time, *optimal* will **behave identically** to the default_x86_64 instance type category.
 
-## The Pub/Sub Hub
+Once again, after **early November 2025**, *optimal* will **no longer** be a static mapping to **4th generation** instances (if available) and will **change over time** as AWS introduces new instance families. If you want to **maintain** the current instance set for *optimal*, you should update your compute environment(s) to **explicitly specify** those **instance types**.
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+We recommend that all **new compute environments** you create use the new default_* categories. Personally, I also recommend you test whether your application can benefit from **Graviton** by building an **Arm container** and defining a **compute environment** and **job queue** using default_arm64. Most likely you will get a **desirable** result!
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+## Conclusion
+
+We encourage you to try the new default_* instance type categories. We believe that gradually adopting newer instance generations over time will help your workload operate efficiently and cost-effectively. To start using the new categories, log in to the **AWS Batch management console**, or refer to the guide for creating a **managed EC2 compute environment** in our **User Guide**.
 
 ---
 
-## Core Microservice
-
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
-
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
-
----
-
-## Front Door Microservice
-
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
-
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
-
----
-
-## New Features in the Solution
-
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**Angel Pizarro** is a Principal Developer Advocate for HPC (High-Performance Computing) and computational science. He has a background in developing bioinformatics applications and building system architectures for scalable computing in genomics and other high-throughput life science domains.

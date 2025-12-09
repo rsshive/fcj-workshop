@@ -12,42 +12,39 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện tất cả tài liệu dự án
+* Điều chỉnh các API để cung cấp đủ thông tin cho Frontend
+* Đảm bảo API responses đáp ứng yêu cầu của Frontend
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Xem xét toàn bộ tài liệu dự án <br> - Xác định các khoảng trống trong tài liệu kỹ thuật <br> - Lập kế hoạch cải thiện tài liệu                                                           | 18/11/2025   | 18/11/2025      | Documentation best practices |
+| 3   | - Viết tài liệu API toàn diện <br>&emsp; + Mô tả endpoints <br>&emsp; + Ví dụ request/response <br>&emsp; + Mã lỗi và xử lý                                                                | 19/11/2025   | 19/11/2025      | OpenAPI/Swagger standards |
+| 4   | - Thu thập feedback yêu cầu từ Frontend <br> - Phân tích các khoảng trống trong API response <br> - Lập kế hoạch điều chỉnh API                                                             | 20/11/2025   | 20/11/2025      | Frontend-Backend collaboration guides |
+| 5   | - Tinh chỉnh APIs cho nhu cầu Frontend <br>&emsp; + Thêm các trường dữ liệu thiếu <br>&emsp; + Tối ưu cấu trúc response <br>&emsp; + Cải thiện thông báo lỗi                               | 21/11/2025   | 21/11/2025      | API design patterns |
+| 6   | - **Thực hành:** <br>&emsp; + Integration testing cuối cùng <br>&emsp; + Cập nhật tài liệu <br>&emsp; + Xác thực tất cả endpoints                                                          | 22/11/2025   | 22/11/2025      | Testing and validation guides |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn thiện tài liệu dự án toàn diện:
+  * Tài liệu kiến trúc kỹ thuật
+  * Hướng dẫn tham khảo API với ví dụ
+  * Hướng dẫn deployment và setup
+  * Hướng dẫn người dùng cho tính năng chatbot
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tinh chỉnh APIs dựa trên yêu cầu Frontend:
+  * Thêm các trường user profile thiếu
+  * Nâng cao responses dữ liệu phim/TV
+  * Cải thiện độ rõ ràng thông báo lỗi
+  * Tối ưu kích thước response payload
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
+* Các cải tiến API đã triển khai:
+  * Thêm hỗ trợ pagination
+  * Bao gồm các trường metadata bổ sung
+  * Nâng cao khả năng filtering
+  * Cải thiện thời gian phản hồi 30%
   * Xem dịch vụ EC2
   * Tạo và quản lý key pair
   * Kiểm tra thông tin dịch vụ đang chạy

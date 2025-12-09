@@ -12,46 +12,39 @@ pre: " <b> 1.7. </b> "
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Finalize and standardize API endpoint structure
+* Test basic functionality of the application
+* Set up AWS Cognito for user authentication and authorization
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Team meeting to discuss and standardize API endpoints <br> - Define API structure and naming conventions <br> - Document API specifications                                                          | 21/10/2025 | 21/10/2025      | API design best practices, REST standards |
+| 3   | - Implement standardized API endpoints <br>&emsp; + User management APIs <br>&emsp; + Content APIs <br>&emsp; + Authentication APIs                                                                   | 22/10/2025 | 22/10/2025      | <https://docs.aws.amazon.com/apigateway/> |
+| 4   | - Test basic application functionality <br> - Perform integration testing <br> - Debug and fix identified issues                                                                                       | 23/10/2025 | 23/10/2025      | Testing frameworks, Postman |
+| 5   | - Learn AWS Cognito fundamentals <br>&emsp; + User pools <br>&emsp; + Identity pools <br>&emsp; + Authentication flows <br> - Plan Cognito integration strategy                                       | 24/10/2025 | 24/10/2025      | <https://docs.aws.amazon.com/cognito/> |
+| 6   | - **Practice:** <br>&emsp; + Set up Cognito user pool <br>&emsp; + Configure authentication flows <br>&emsp; + Integrate Cognito with API Gateway                                                     | 25/10/2025 | 25/10/2025      | <https://docs.aws.amazon.com/cognito/> |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully standardized all API endpoints with consistent naming conventions and structure
 
-* Successfully created and configured an AWS Free Tier account.
+* Completed integration testing for basic application features:
+  * User registration and login flows
+  * Content retrieval APIs
+  * Data validation and error handling
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Set up AWS Cognito user pool with:
+  * User authentication and authorization
+  * Password policies and MFA options
+  * Custom attributes for user profiles
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Integrated Cognito with API Gateway:
+  * Configured authorizers
+  * Implemented JWT token validation
+  * Secured API endpoints
 
-* Used AWS CLI to perform basic operations such as:
+* Fixed critical bugs and improved API response times
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Documented API endpoints and authentication flows for team reference

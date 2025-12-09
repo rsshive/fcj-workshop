@@ -10,20 +10,43 @@ pre: " <b> 4.1. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch: "AI-Driven Development Life Cycle: Tái tưởng tượng Kỹ thuật Phần mềm"
+
+### Thông Tin Sự Kiện
+
+- **Sự kiện**: AWS GenAI Builder Club Session
+- **Ngày**: Thứ Sáu, 3 tháng 10 năm 2025
+- **Thời gian**: 2:00 PM - 4:30 PM
+- **Địa điểm**: AWS Event Hall, L26 Bitexco Tower, Thành phố Hồ Chí Minh
+- **Đơn vị tổ chức**: AWS GenAI Builder Club
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Khám phá tác động chuyển đổi của generative AI đối với phát triển phần mềm
+- Trình diễn cách AI tái tưởng tượng toàn bộ vòng đời phát triển (học, lên kế hoạch, tạo, triển khai, quản lý)
+- Giới thiệu các công cụ AI tự động hóa các tác vụ nặng không có sự khác biệt
+- Cho phép developers tập trung vào công việc sáng tạo có giá trị cao hơn
+- Giới thiệu Amazon Q Developer và Kiro cho AI-driven development
 
-### Danh Sách Diễn Giả
+### Giảng Viên & Ban Tổ Chức
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+**Giảng viên:**
+- **Toan Huynh** – Chuyên gia Amazon Q Developer
+- **My Nguyen** – Chuyên gia Kiro
+
+**Ban điều phối:**
+- Diem My
+- Dai Truong
+- Dinh Nguyen
+
+### Chương Trình Sự Kiện
+
+| Thời gian | Hoạt động | Diễn giả |
+|-----------|-----------|----------|
+| 2:00 PM - 2:15 PM | Chào mừng & Giới thiệu | Ban tổ chức |
+| 2:15 PM - 3:30 PM | Tổng quan AI-Driven Development Life Cycle & Demo Amazon Q Developer | Toan Huynh |
+| 3:30 PM - 3:45 PM | Giải lao & Networking | - |
+| 3:45 PM - 4:30 PM | Demo Kiro | My Nguyen |
 
 ### Nội Dung Nổi Bật
 
@@ -123,3 +146,4 @@ Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải 
 #### Một số hình ảnh khi tham gia sự kiện
 * Thêm các hình ảnh của các bạn tại đây
 > Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+

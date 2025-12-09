@@ -12,48 +12,41 @@ pre: " <b> 1.7. </b> "
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Thống nhất cấu trúc các API endpoint
+* Kiểm thử các chức năng cơ bản của ứng dụng
+* Thiết lập AWS Cognito cho xác thực và phân quyền người dùng
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Họp nhóm thảo luận và thống nhất các API endpoint <br> - Định nghĩa cấu trúc API và quy tắc đặt tên <br> - Tài liệu hóa các API specifications                                          | 21/10/2025   | 21/10/2025      | API design best practices, REST standards |
+| 3   | - Triển khai các API endpoint đã chuẩn hóa <br>&emsp; + APIs quản lý người dùng <br>&emsp; + APIs nội dung <br>&emsp; + APIs xác thực                                                      | 22/10/2025   | 22/10/2025      | <https://docs.aws.amazon.com/apigateway/> |
+| 4   | - Kiểm thử các chức năng cơ bản của ứng dụng <br> - Thực hiện integration testing <br> - Debug và sửa các lỗi phát hiện được                                                               | 23/10/2025   | 23/10/2025      | Testing frameworks, Postman |
+| 5   | - Tìm hiểu AWS Cognito cơ bản <br>&emsp; + User pools <br>&emsp; + Identity pools <br>&emsp; + Authentication flows <br> - Lên kế hoạch tích hợp Cognito                                   | 24/10/2025   | 24/10/2025      | <https://docs.aws.amazon.com/cognito/> |
+| 6   | - **Thực hành:** <br>&emsp; + Thiết lập Cognito user pool <br>&emsp; + Cấu hình authentication flows <br>&emsp; + Tích hợp Cognito với API Gateway                                         | 25/10/2025   | 25/10/2025      | <https://docs.aws.amazon.com/cognito/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Thống nhất thành công tất cả API endpoints với quy tắc đặt tên và cấu trúc nhất quán
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thành integration testing cho các tính năng cơ bản:
+  * Luồng đăng ký và đăng nhập người dùng
+  * APIs lấy nội dung
+  * Xác thực dữ liệu và xử lý lỗi
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thiết lập AWS Cognito user pool với:
+  * Xác thực và phân quyền người dùng
+  * Chính sách mật khẩu và tùy chọn MFA
+  * Custom attributes cho user profiles
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tích hợp Cognito với API Gateway:
+  * Cấu hình authorizers
+  * Triển khai JWT token validation
+  * Bảo mật các API endpoints
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Sửa các lỗi nghiêm trọng và cải thiện thời gian phản hồi API
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tài liệu hóa các API endpoints và authentication flows cho nhóm tham khảo
 
 

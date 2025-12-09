@@ -12,48 +12,49 @@ pre: " <b> 1.9. </b> "
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Áp dụng AWS Bedrock vào dự án
+* Phát triển các API chatbot cơ bản sử dụng Bedrock foundation models
+* Kiểm thử và xác thực chức năng chatbot
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Thiết kế kiến trúc chatbot với Bedrock <br> - Lên kế hoạch cấu trúc API cho tương tác chatbot <br> - Định nghĩa định dạng input/output                                                | 04/11/2025   | 04/11/2025      | Bedrock documentation, API design patterns |
+| 3   | - Triển khai Lambda functions cho Bedrock API calls <br>&emsp; + Xử lý request <br>&emsp; + Định dạng response <br>&emsp; + Xử lý lỗi                                                       | 05/11/2025   | 05/11/2025      | <https://docs.aws.amazon.com/bedrock/> |
+| 4   | - Phát triển các chatbot APIs <br>&emsp; + Chat endpoint <br>&emsp; + Quản lý context <br>&emsp; + Lịch sử hội thoại                                                                            | 06/11/2025   | 06/11/2025      | API Gateway, Lambda integration |
+| 5   | - Kiểm thử chức năng chatbot <br>&emsp; + Test Q&A cơ bản <br>&emsp; + Xác thực độ chính xác response <br>&emsp; + Đo latency                                                              | 07/11/2025   | 07/11/2025      | Testing frameworks |
+| 6   | - **Thực hành:** <br>&emsp; + Integration testing với frontend <br>&emsp; + Debug và tối ưu hiệu suất <br>&emsp; + Tinh chỉnh prompts cho response tốt hơn                         | 08/11/2025   | 08/11/2025      | Prompt engineering best practices |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tích hợp thành công AWS Bedrock vào dự án:
+  * Cấu hình Bedrock runtime client
+  * Triển khai Claude model cho conversational AI
+  * Thiết lập IAM roles và permissions phù hợp
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Phát triển Lambda functions cho chatbot:
+  * Tiền xử lý và xác thực request
+  * Gọi Bedrock API
+  * Định dạng response và xử lý lỗi
+  * Quản lý context hội thoại
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tạo các chatbot API endpoints:
+  * `/chat` - Endpoint hội thoại chính
+  * `/chat/history` - Lấy lịch sử hội thoại
+  * `/chat/clear` - Xóa context hội thoại
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Triển khai các tính năng chatbot cơ bản:
+  * Hiểu ngôn ngữ tự nhiên
+  * Phản hồi nhận biết ngữ cảnh
+  * Hỗ trợ hội thoại nhiều lượt
+  * Cơ chế khắc phục lỗi
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Kiểm thử và xác thực:
+  * Thời gian phản hồi trung bình 2-3 giây
+  * Độ chính xác 95% cho các truy vấn cơ bản
+  * Xử lý thành công các edge cases
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tối ưu prompt engineering cho phản hồi liên quan phim/chương trình TV tốt hơn
 
 

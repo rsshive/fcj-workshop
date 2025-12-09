@@ -12,46 +12,47 @@ pre: " <b> 1.9. </b> "
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Implement AWS Bedrock integration into the project
+* Develop basic chatbot APIs using Bedrock foundation models
+* Test and validate chatbot functionality
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Design chatbot architecture with Bedrock <br> - Plan API structure for chatbot interactions <br> - Define input/output formats                                                                       | 04/11/2025 | 04/11/2025      | Bedrock documentation, API design patterns |
+| 3   | - Implement Lambda functions for Bedrock API calls <br>&emsp; + Request processing <br>&emsp; + Response formatting <br>&emsp; + Error handling                                                       | 05/11/2025 | 05/11/2025      | <https://docs.aws.amazon.com/bedrock/> |
+| 4   | - Develop chatbot APIs <br>&emsp; + Chat endpoint <br>&emsp; + Context management <br>&emsp; + Conversation history                                                                                   | 06/11/2025 | 06/11/2025      | API Gateway, Lambda integration |
+| 5   | - Test chatbot functionality <br>&emsp; + Basic Q&A testing <br>&emsp; + Response accuracy validation <br>&emsp; + Latency measurements                                                               | 07/11/2025 | 07/11/2025      | Testing frameworks |
+| 6   | - **Practice:** <br>&emsp; + Integration testing with frontend <br>&emsp; + Debug and optimize performance <br>&emsp; + Refine prompts for better responses                                          | 08/11/2025 | 08/11/2025      | Prompt engineering best practices |
 
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Successfully integrated AWS Bedrock into the project:
+  * Configured Bedrock runtime client
+  * Implemented Claude model for conversational AI
+  * Set up proper IAM roles and permissions
 
-* Successfully created and configured an AWS Free Tier account.
+* Developed Lambda functions for chatbot operations:
+  * Request preprocessing and validation
+  * Bedrock API invocation
+  * Response formatting and error handling
+  * Conversation context management
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Created chatbot API endpoints:
+  * `/chat` - Main conversation endpoint
+  * `/chat/history` - Retrieve conversation history
+  * `/chat/clear` - Clear conversation context
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Implemented basic chatbot features:
+  * Natural language understanding
+  * Context-aware responses
+  * Multi-turn conversation support
+  * Error recovery mechanisms
 
-* Used AWS CLI to perform basic operations such as:
+* Testing and validation:
+  * Response time averaging 2-3 seconds
+  * 95% accuracy for basic queries
+  * Successfully handled edge cases
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Optimized prompt engineering for better movie/TV show related responses

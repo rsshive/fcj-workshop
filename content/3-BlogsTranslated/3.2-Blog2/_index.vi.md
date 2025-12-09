@@ -1,127 +1,57 @@
----
+﻿---
 title: "Blog 2"
-date: "`r Sys.Date()`"
+date: "\ Sys.Date()\"
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bắt đầu với healthcare data lakes: Sử dụng microservices
+# Ra mắt các nhóm phiên bản "mặc định" (default instance) dành cho AWS Batch
 
-Các data lake có thể giúp các bệnh viện và cơ sở y tế chuyển dữ liệu thành những thông tin chi tiết về doanh nghiệp và duy trì hoạt động kinh doanh liên tục, đồng thời bảo vệ quyền riêng tư của bệnh nhân. **Data lake** là một kho lưu trữ tập trung, được quản lý và bảo mật để lưu trữ tất cả dữ liệu của bạn, cả ở dạng ban đầu và đã xử lý để phân tích. data lake cho phép bạn chia nhỏ các kho chứa dữ liệu và kết hợp các loại phân tích khác nhau để có được thông tin chi tiết và đưa ra các quyết định kinh doanh tốt hơn.
+#### Bởi Angel Pizarro vào 18/8/2025 trong [AWS Batch](https://aws.amazon.com/blogs/hpc/category/compute/aws-batch/), [Điện toán hiệu năng cao (HPC)](https://aws.amazon.com/blogs/hpc/category/high-performance-computing/) | [Liên kết](https://aws.amazon.com/blogs/hpc/introducing-default-instance-categories-for-aws-batch/)
 
-Bài đăng trên blog này là một phần của loạt bài lớn hơn về việc bắt đầu cài đặt data lake dành cho lĩnh vực y tế. Trong bài đăng blog cuối cùng của tôi trong loạt bài, *“Bắt đầu với data lake dành cho lĩnh vực y tế: Đào sâu vào Amazon Cognito”*, tôi tập trung vào các chi tiết cụ thể của việc sử dụng Amazon Cognito và Attribute Based Access Control (ABAC) để xác thực và ủy quyền người dùng trong giải pháp data lake y tế. Trong blog này, tôi trình bày chi tiết cách giải pháp đã phát triển ở cấp độ cơ bản, bao gồm các quyết định thiết kế mà tôi đã đưa ra và các tính năng bổ sung được sử dụng. Bạn có thể truy cập các code samples cho giải pháp tại Git repo này để tham khảo.
+Hôm nay, chúng tôi ra mắt một bộ **phân loại theo họ instance** mới cho **AWS Batch**, gồm **"default_x86_64"** và **"default_arm64"**. Các danh mục mới này vừa là sự **làm rõ** vừa là **cải tiến** so với danh mục loại phiên bản **"optimal"** hiện có. Bài viết này cung cấp một số bối cảnh về tính năng mới và cách bạn có thể **cấu hình các môi trường Batch** để tận dụng những cải tiến đó.
 
----
+## Lựa chọn instance types cho AWS Batch Compute Environments để khởi chạy
 
-## Hướng dẫn kiến trúc
+Bạn có thể chỉ định **tập hợp các loại phiên bản [Amazon EC2](https://aws.amazon.com/ec2/) (instance types)** mà một **môi trường tính toán (compute environment)** được phép khởi chạy để chạy các job trong **hàng đợi công việc (job queues)** của bạn. Ví dụ, nếu bạn biết các job của mình đạt **giá/hiệu năng** (price/performance) tốt nhất trên g6.16xlarge, bạn có thể đặt [tham số](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes) computeResources.instanceTypes của môi trường tính toán thành ["g6.16xlarge"], và môi trường đó sẽ chỉ khởi chạy **chính xác** loại và kích cỡ phiên bản này cho các job trong (các) hàng đợi liên kết.
 
-Thay đổi chính kể từ lần trình bày cuối cùng của kiến trúc tổng thể là việc tách dịch vụ đơn lẻ thành một tập hợp các dịch vụ nhỏ để cải thiện khả năng bảo trì và tính linh hoạt. Việc tích hợp một lượng lớn dữ liệu y tế khác nhau thường yêu cầu các trình kết nối chuyên biệt cho từng định dạng; bằng cách giữ chúng được đóng gói riêng biệt với microservices, chúng ta có thể thêm, xóa và sửa đổi từng trình kết nối mà không ảnh hưởng đến những kết nối khác. Các microservices được kết nối rời thông qua tin nhắn publish/subscribe tập trung trong cái mà tôi gọi là “pub/sub hub”.
+Để tận dụng tối đa **khả năng lập lịch (scheduling) và co giãn (scaling)** của Batch, bạn nên định nghĩa **một tập hợp đa dạng** các phiên bản và để Batch quyết định sẽ khởi chạy loại nào dựa trên yêu cầu tài nguyên CPU, bộ nhớ và GPU của các job. Mặc dù bạn có thể chỉ định một **danh sách loại phiên bản** (ví dụ ["c5.24xlarge", "m6.48xlarge"]), bạn cũng có thể định nghĩa một **tập hợp các họ phiên bản (instance families)** (ví dụ ["c5","c7a","c7i","m7i"]) để Batch có thể khởi chạy thay bạn. Trước đây, bạn cũng có tùy chọn dùng danh mục **"optimal"**, mà Batch sẽ ánh xạ thành ["c4","m4","r4"] khi các phiên bản này khả dụng trong **Vùng (AWS Region)** của bạn. Nếu một Region không có các loại phiên bản đó, Batch sẽ ánh xạ *optimal* sang **thế hệ có chi phí thấp nhất** trong Region, thường là ["c5","m5","r5"].
 
-Giải pháp này đại diện cho những gì tôi sẽ coi là một lần lặp nước rút hợp lý khác từ last post của tôi. Phạm vi vẫn được giới hạn trong việc nhập và phân tích cú pháp đơn giản của các **HL7v2 messages** được định dạng theo **Quy tắc mã hóa 7 (ER7)** thông qua giao diện REST.
+Mặc dù *optimal* là một thiết lập viết tắt tiện lợi, chúng tôi nhận thấy nó **không khớp** với kỳ vọng của khách hàng. Batch **không** chọn các phiên bản cho **hiệu năng tốt nhất** của job hay **giá tốt nhất** cho ứng dụng của bạn. Danh mục *optimal* chỉ là **một phép ánh xạ đơn giản** và không hơn. Các thế hệ phiên bản mới hơn có khả năng mang lại **giá/hiệu năng** tốt hơn cho hầu hết workload. Trong tất cả các trường hợp tôi đã xem xét, các phiên bản **thế hệ thứ 4** vừa **chậm hơn** vừa **đắt hơn** so với **thế hệ thứ 5**, vì vậy *optimal* thực ra **không hề "tối ưu"** như cái tên của nó!
 
-**Kiến trúc giải pháp bây giờ như sau:**
+Cuối cùng, *optimal* **không bao gồm** các phiên bản dùng **bộ xử lý AWS Graviton**, vốn được thiết kế riêng để mang lại **giá/hiệu năng vượt trội** cho nhiều loại workload.
 
-> *Hình 1. Kiến trúc tổng thể; những ô màu thể hiện những dịch vụ riêng biệt.*
+## Nâng cấp từ cấu hình "optimal"
 
----
+Hôm nay, chúng tôi đã ra mắt một bộ **danh mục loại phiên bản (instance type categories)** mới để cải thiện trải nghiệm của bạn với tính năng lựa chọn instance của Batch. Giờ đây bạn có thể chọn default_x86_64 cho một tập các **họ instance** dùng CPU **x86**, và default_arm64 cho một tập các **instance** dùng CPU **AWS Graviton**. Danh sách **instance type** này sẽ **không tĩnh** và sẽ thay đổi theo thời gian khi chúng tôi giới thiệu các **họ instance** mới. Bạn có thể tìm phần ánh xạ giữa từng **danh mục** và tập **họ instance** theo từng **Region** trong trang tài liệu [**Instance type compute table**](https://docs.aws.amazon.com/batch/latest/userguide/instance-type-compute-table.html); ví dụ, phần ánh xạ của default_arm64 tại thời điểm ra mắt tính năng sẽ như sau:
 
-Mặc dù thuật ngữ *microservices* có một số sự mơ hồ cố hữu, một số đặc điểm là chung:  
-- Chúng nhỏ, tự chủ, kết hợp rời rạc  
-- Có thể tái sử dụng, giao tiếp thông qua giao diện được xác định rõ  
-- Chuyên biệt để giải quyết một việc  
-- Thường được triển khai trong **event-driven architecture**
+| Vùng/Khu vực (Regions) | Họ phiên bản (instance families) |
+| :---- | :---- |
+| Tất cả các Vùng AWS hỗ trợ AWS Batch | m6g, c6g, r6g c7g |
 
-Khi xác định vị trí tạo ranh giới giữa các microservices, cần cân nhắc:  
-- **Nội tại**: công nghệ được sử dụng, hiệu suất, độ tin cậy, khả năng mở rộng  
-- **Bên ngoài**: chức năng phụ thuộc, tần suất thay đổi, khả năng tái sử dụng  
-- **Con người**: quyền sở hữu nhóm, quản lý *cognitive load*
+*Bảng 1. Bản ánh xạ của **danh mục loại phiên bản*** default_arm64 *tới các **họ phiên bản cụ thể** trong các **Vùng (Regions)** có hỗ trợ **AWS Batch**.*
 
----
+Các ánh xạ mặc định **không** bao gồm các phiên bản tăng tốc (accelerated instances) theo thiết kế. Chúng tôi **rất khuyến nghị** bạn chỉ định cụ thể các loại phiên bản nếu workload của bạn được hưởng lợi từ các phiên bản tăng tốc. Ngoài ra, chúng tôi khuyến nghị **định nghĩa riêng** một **job queue** và **compute environment** tách biệt với các cụm instance **không tăng tốc**. Khi tài nguyên được tách riêng, Batch có thể đưa ra các quyết định co giãn (scaling) **tốt hơn** cho workload của bạn và **ngăn** việc lập lịch các job không tăng tốc lên các instance tăng tốc, điều có thể dẫn đến **chi phí phát sinh**.
 
-## Lựa chọn công nghệ và phạm vi giao tiếp
+Tương tự như trước đây với *optimal*, bạn vẫn có thể **định nghĩa bổ sung** các **instance type** bên cạnh các danh mục default_*. Batch sẽ xem xét **toàn bộ danh sách** bạn đã khai báo khi lựa chọn **instance type** để chạy các job.
 
-| Phạm vi giao tiếp                        | Các công nghệ / mô hình cần xem xét                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Trong một microservice                   | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Giữa các microservices trong một dịch vụ | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Giữa các dịch vụ                         | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+## Chuyển đổi từ *optimal*
 
----
+Chúng tôi khuyến nghị bạn cập nhật các môi trường Batch để áp dụng các danh mục mới. Tuy nhiên, bạn **không bắt buộc** phải cập nhật. Các môi trường tính toán (compute environments) AWS Batch hiện có đang sử dụng *optimal* vẫn **hợp lệ**. Các thao tác API [**CreateComputeEnvironment**](https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateComputeEnvironment.html) và [**UpdateComputeEnvironment**](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html) vẫn chấp nhận *optimal* như một giá trị hợp lệ. Hành vi của *optimal* sẽ **giữ nguyên** cho đến **đầu tháng 11 năm 2025**. Sau thời điểm đó, *optimal* sẽ **hành xử giống** với danh mục loại phiên bản default_x86_64.
 
-## The pub/sub hub
+Một lần nữa, sau **đầu tháng 11 năm 2025**, *optimal* sẽ **không còn** là một ánh xạ tĩnh tới các phiên bản **thế hệ thứ 4** (nếu khả dụng) và sẽ **thay đổi theo thời gian** khi AWS giới thiệu các họ phiên bản mới. Nếu bạn muốn **duy trì** tập phiên bản hiện tại cho *optimal*, bạn nên cập nhật (các) môi trường tính toán của mình để **chỉ định cụ thể** các **instance type** đó.
 
-Việc sử dụng kiến trúc **hub-and-spoke** (hay message broker) hoạt động tốt với một số lượng nhỏ các microservices liên quan chặt chẽ.  
-- Mỗi microservice chỉ phụ thuộc vào *hub*  
-- Kết nối giữa các microservice chỉ giới hạn ở nội dung của message được xuất  
-- Giảm số lượng synchronous calls vì pub/sub là *push* không đồng bộ một chiều
+Chúng tôi khuyến nghị mọi **môi trường tính toán mới** mà bạn tạo hãy sử dụng các danh mục default_* mới. Cá nhân tôi cũng khuyến nghị bạn kiểm tra xem ứng dụng của mình có thể hưởng lợi từ **Graviton** hay không bằng cách tạo **container cho Arm** và định nghĩa một **compute environment** cùng **job queue** dùng default_arm64. Rất có thể bạn sẽ nhận được một kết quả **như mong muốn**!
 
-Nhược điểm: cần **phối hợp và giám sát** để tránh microservice xử lý nhầm message.
+## Kết luận
+
+Chúng tôi rất mong bạn dùng thử các danh mục loại phiên bản (instance type) mặc định default_* mới. Chúng tôi tin rằng việc dần dần áp dụng các thế hệ instance mới hơn theo thời gian sẽ giúp workload của bạn vận hành hiệu quả và tiết kiệm chi phí. Để bắt đầu sử dụng các danh mục mới, hãy đăng nhập vào **Bảng điều khiển quản trị AWS Batch (AWS Batch management console)**, hoặc tham khảo hướng dẫn tạo **môi trường tính toán EC2** **được quản lý** (**managed EC2 compute environment)** trong **Sổ tay hướng dẫn (User Guide)** của chúng tôi.
 
 ---
 
-## Core microservice
-
-Cung cấp dữ liệu nền tảng và lớp truyền thông, gồm:  
-- **Amazon S3** bucket cho dữ liệu  
-- **Amazon DynamoDB** cho danh mục dữ liệu  
-- **AWS Lambda** để ghi message vào data lake và danh mục  
-- **Amazon SNS** topic làm *hub*  
-- **Amazon S3** bucket cho artifacts như mã Lambda
-
-> Chỉ cho phép truy cập ghi gián tiếp vào data lake qua hàm Lambda → đảm bảo nhất quán.
-
----
-
-## Front door microservice
-
-- Cung cấp API Gateway để tương tác REST bên ngoài  
-- Xác thực & ủy quyền dựa trên **OIDC** thông qua **Amazon Cognito**  
-- Cơ chế *deduplication* tự quản lý bằng DynamoDB thay vì SNS FIFO vì:
-  1. SNS deduplication TTL chỉ 5 phút
-  2. SNS FIFO yêu cầu SQS FIFO
-  3. Chủ động báo cho sender biết message là bản sao
-
----
-
-## Staging ER7 microservice
-
-- Lambda “trigger” đăng ký với pub/sub hub, lọc message theo attribute  
-- Step Functions Express Workflow để chuyển ER7 → JSON  
-- Hai Lambda:
-  1. Sửa format ER7 (newline, carriage return)
-  2. Parsing logic  
-- Kết quả hoặc lỗi được đẩy lại vào pub/sub hub
-
----
-
-## Tính năng mới trong giải pháp
-
-### 1. AWS CloudFormation cross-stack references
-Ví dụ *outputs* trong core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
+**Angel Pizarro** là Principal Developer Advocate về HPC (High-Performance Computing  điện toán hiệu năng cao) và khoa học tính toán. Anh có nền tảng về phát triển ứng dụng tin-sinh học và xây dựng kiến trúc hệ thống cho điện toán có khả năng mở rộng trong genomics và các lĩnh vực khoa học sự sống thông lượng cao khác.

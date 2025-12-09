@@ -12,42 +12,38 @@ pre: " <b> 1.10. </b> "
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tích hợp nguồn dữ liệu TMDB vào chatbot
+* Phát triển các Lambda functions hỗ trợ hoạt động chatbot
+* Nâng cao khả năng cung cấp thông tin phim/chương trình TV cho chatbot
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Nghiên cứu cấu trúc và khả năng của TMDB API <br> - Lên kế hoạch chiến lược tích hợp dữ liệu TMDB <br> - Định nghĩa các trường dữ liệu phim/TV cần thiết                                 | 11/11/2025   | 11/11/2025      | <https://developers.themoviedb.org/> |
+| 3   | - Phát triển Lambda functions cho TMDB API calls <br>&emsp; + Tìm kiếm phim/chương trình TV <br>&emsp; + Lấy thông tin chi tiết và metadata <br>&emsp; + Xử lý API rate limits             | 12/11/2025   | 12/11/2025      | TMDB API documentation |
+| 4   | - Tích hợp dữ liệu TMDB với chatbot <br>&emsp; + Kết nối TMDB Lambda với Bedrock <br>&emsp; + Nâng cao prompts với dữ liệu thực <br>&emsp; + Định dạng thông tin phim/TV                  | 13/11/2025   | 13/11/2025      | Lambda integration patterns |
+| 5   | - Phát triển các Lambda functions hỗ trợ <br>&emsp; + Lớp caching dữ liệu <br>&emsp; + Xử lý lỗi và retry <br>&emsp; + Tối ưu response                                                     | 14/11/2025   | 14/11/2025      | AWS Lambda best practices |
+| 6   | - **Thực hành:** <br>&emsp; + Test chatbot với dữ liệu TMDB <br>&emsp; + Xác thực độ chính xác dữ liệu <br>&emsp; + Tối ưu hiệu suất                                                      | 15/11/2025   | 15/11/2025      | Testing and optimization guides |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tích hợp thành công nguồn dữ liệu TMDB:
+  * Cấu hình truy cập TMDB API
+  * Triển khai quản lý API key bảo mật
+  * Thiết lập rate limiting và caching
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Phát triển các Lambda functions toàn diện:
+  * **TMDB Search Lambda**: Tìm kiếm phim và chương trình TV
+  * **TMDB Details Lambda**: Lấy thông tin chi tiết
+  * **Data Processing Lambda**: Định dạng và tối ưu dữ liệu
+  * **Cache Management Lambda**: Quản lý dữ liệu truy cập thường xuyên
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
+* Nâng cao khả năng chatbot:
+  * Thông tin phim/chương trình TV real-time
+  * Chi tiết diễn viên và crew chính xác
+  * Ngày phát hành và đánh giá
+  * Gợi ý dựa trên dữ liệu TMDB
   * Xem dịch vụ EC2
   * Tạo và quản lý key pair
   * Kiểm tra thông tin dịch vụ đang chạy

@@ -10,20 +10,28 @@ pre: " <b> 4.2. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch: "Data Science On AWS Workshop"
+
+### Thông Tin Sự Kiện
+
+- **Sự kiện**: Data Science On AWS Workshop
+- **Ngày**: Thứ Năm, 16 tháng 10 năm 2025
+- **Thời gian**: 9:30 AM - 11:45 AM
+- **Địa điểm**: Hall Academic, Trường Đại học FPT
+- **Đơn vị tổ chức**: AWS Community Builders
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Khám phá toàn bộ hành trình xây dựng hệ thống Data Science hiện đại trên AWS
+- Thực hành từ lý thuyết đến ứng dụng thực tế
+- Hiểu tầm quan trọng của Cloud trong quy trình Data Science
+- Tìm hiểu các dịch vụ AWS cho xử lý dữ liệu, huấn luyện ML và triển khai mô hình
+- So sánh giải pháp Cloud vs. On-premise về chi phí và hiệu năng
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Văn Hoàng Kha** – Cloud Solutions Architect, AWS Community Builder
+- **Bạch Doãn Vương** – Cloud Develops Engineer, AWS Community Builder
 
 ### Nội Dung Nổi Bật
 
@@ -123,3 +131,4 @@ Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải 
 #### Một số hình ảnh khi tham gia sự kiện
 * Thêm các hình ảnh của các bạn tại đây
 > Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+

@@ -12,42 +12,39 @@ pre: " <b> 1.11. </b> "
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete all project documentation
+* Refine APIs to provide sufficient information for Frontend
+* Ensure API responses meet Frontend requirements
 
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Review all project documentation <br> - Identify gaps in technical documentation <br> - Plan documentation improvements                                                                              | 18/11/2025 | 18/11/2025      | Documentation best practices |
+| 3   | - Write comprehensive API documentation <br>&emsp; + Endpoint descriptions <br>&emsp; + Request/response examples <br>&emsp; + Error codes and handling                                               | 19/11/2025 | 19/11/2025      | OpenAPI/Swagger standards |
+| 4   | - Gather Frontend requirements feedback <br> - Analyze API response gaps <br> - Plan API adjustments                                                                                                   | 20/11/2025 | 20/11/2025      | Frontend-Backend collaboration guides |
+| 5   | - Refine APIs for Frontend needs <br>&emsp; + Add missing data fields <br>&emsp; + Optimize response structures <br>&emsp; + Improve error messages                                                   | 21/11/2025 | 21/11/2025      | API design patterns |
+| 6   | - **Practice:** <br>&emsp; + Final integration testing <br>&emsp; + Update documentation <br>&emsp; + Validate all endpoints                                                                          | 22/11/2025 | 22/11/2025      | Testing and validation guides |
 
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Completed comprehensive project documentation:
+  * Technical architecture documentation
+  * API reference guide with examples
+  * Deployment and setup instructions
+  * User guides for chatbot features
 
-* Successfully created and configured an AWS Free Tier account.
+* Refined APIs based on Frontend requirements:
+  * Added missing user profile fields
+  * Enhanced movie/TV data responses
+  * Improved error message clarity
+  * Optimized response payload sizes
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
+* API improvements implemented:
+  * Added pagination support
+  * Included additional metadata fields
+  * Enhanced filtering capabilities
+  * Improved response time by 30%
   * View EC2 service
   * Create and manage key pairs
   * Check information about running services
